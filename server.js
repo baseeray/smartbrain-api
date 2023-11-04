@@ -38,6 +38,6 @@ app.post('/imageUrl', image.handleAPIcall);
 //might need in the future DO NOT DELETE
 app.get('/profile/:name', (req, res) => { profile.handleProfile(req, res, db)});
 
-app.listen(1234, () => {
-    console.log('Server is running on port 1234');
+app.listen(process.env.PORT || 1234, () => {
+    console.log(`Server is running on port ${process.env.PORT}`);
 });
